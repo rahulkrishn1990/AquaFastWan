@@ -2,6 +2,6 @@ cmake_minimum_required (VERSION 2.6)
 
 project (AquaFastWan)
 
-#add_subdirectory()
-
-add_executable(AquaFastWan AquaFastWan.exe)
+if (BUILD_STAG MATCHES libafwdatabase)
+add_subdirectory(libafwdatabase)
+endif()
