@@ -10,14 +10,19 @@
 #define LIBAFWDATABASE_SRC_DBWRITER_H_
 
 #include <iostream>
-using namespace std;
-
 #include "DbBase.h"
+
+namespace aquafastwan {
+namespace sqlite{
 
 class DbWriter : public DbBase
 {
 public:
 	bool Write(string);
 };
+
+} // sqlite
+} // aquafastwan
+
 
 #endif /* LIBAFWDATABASE_SRC_DBWRITER_H_ */

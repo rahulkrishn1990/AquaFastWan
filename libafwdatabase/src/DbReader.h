@@ -10,14 +10,20 @@
 #define LIBAFWDATABASE_SRC_DBREADER_H_
 
 #include <iostream>
-using namespace std;
-
 #include "DbBase.h"
+
+namespace aquafastwan {
+namespace sqlite{
+
 
 class DbReader : public DbBase
 {
 public:
-	string Read();
+    std::string Read();
 };
+
+} // sqlite
+} // aquafastwan
+
 
 #endif /* LIBAFWDATABASE_SRC_DBREADER_H_ */

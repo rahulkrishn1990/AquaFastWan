@@ -8,7 +8,15 @@
 
 #include "DbReader.h"
 
+namespace aquafastwan {
+namespace sqlite{
+
+using namespace std;
+
 string DbReader::Read()
 {
 	return string("");
 }
+
+} // sqlite
+} // aquafastwan

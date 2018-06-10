@@ -8,7 +8,14 @@
 
 #include "DbWriter.h"
 
+namespace aquafastwan {
+namespace sqlite{
+
+
 bool DbWriter::Write(string in)
 {
 	return true;
 }
+
+} // sqlite
+} // aquafastwan

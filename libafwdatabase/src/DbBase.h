@@ -11,15 +11,27 @@
 
 
 #include <sqlite3.h>
-#include <iostream>
-using namespace std;
+
+namespace aquafastwan {
+namespace sqlite{
 
 class DbBase
 {
+public:
+
+    DbBase();
+
+    ~DbBase();
+
 protected:
-	void Init();
-protected:
-	sqlite3* _sqlite3;
+
+    void Init();
+
+    sqlite3 * _sqlite3;
 };
+
+} // sqlite
+} // aquafastwan
+
 
 #endif /* LIBAFWDATABASE_SRC_DBBASE_H_ */
