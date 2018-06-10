@@ -12,8 +12,6 @@ using namespace std;
 #include <QString>
 #include <QStringList>
 
-#include "Globel.h"
-
 class AtDbWriter
 {
 public:
@@ -27,7 +25,8 @@ private:
 
 private:
 	sqlite3* _sqlite3;
+	QString  _dbPath;
 	QString  _dbFile;
 };
 
-#endif /* ATDBWRITERCLIENT_ATDBWRITER_H_ */
+#endif

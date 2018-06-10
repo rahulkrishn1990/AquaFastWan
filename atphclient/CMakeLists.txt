@@ -1,12 +1,10 @@
 cmake_minimum_required (VERSION 2.8)
 
-project(atdbwriterclient)
+project(atphclient)
 
 include_directories(/usr/include)
 
 link_directories(/usr/lib)
-
-target_link_libraries(sqlite3)
 
 find_package(Qt5Core CONFIG REQUIRED)
 
@@ -18,9 +16,7 @@ add_executable(${PROJECT_NAME} ${CPP_FILES})
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${HEADER_FILES})
 
-target_link_libraries(${PROJECT_NAME} 
-					  sqlite3
-					  Qt5::Core)
+target_link_libraries(${PROJECT_NAME} Qt5::Core)
 					  
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "/usr/bin")
 

@@ -2,7 +2,8 @@
 
 AtDbWriter::AtDbWriter()
 : _sqlite3(NULL),
-  _dbFile(QString(DB_PATH) + "/" + QString(DB_FILE))
+  _dbPath("/opt/aquatracker"),
+  _dbFile(_dbPath + "/atdatabase.db")
 {
 	InitializeDbFile();
 }
@@ -32,10 +33,10 @@ bool AtDbWriter::Insert(QString inTable, QString inValue)
 bool AtDbWriter::InitializeDbFile()
 {
 	QDir dir;
-	if (dir.exists(QString(DB_PATH)) == false)
+	if (dir.exists(_dbPath) == false)
 	{
-		dir.mkpath(QString(DB_PATH));
-		qDebug() << "AtDbWriter::InitializeDbFile Directory created: " << QString(DB_PATH);
+		dir.mkpath(_dbPath);
+		qDebug() << "AtDbWriter::InitializeDbFile Directory created: " << _dbPath;
 	}
 
 	QFile file(_dbFile);
