@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.0)
 
 project(atdbwriterclient)
 
@@ -18,9 +18,7 @@ add_executable(${PROJECT_NAME} ${CPP_FILES})
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${HEADER_FILES})
 
-target_link_libraries(${PROJECT_NAME} 
-					  sqlite3
-					  Qt5::Core)
+target_link_libraries(${PROJECT_NAME}  sqlite3 Qt5::Core)
 					  
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "/usr/bin")
 

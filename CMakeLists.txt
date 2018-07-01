@@ -1,8 +1,6 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.0)
 
-if (BUILD_STAGE MATCHES libafwdatabase)
-add_subdirectory(libafwdatabase)
-elseif(BUILD_STAGE MATCHES atdbwriterclient)
+if(BUILD_STAGE MATCHES atdbwriterclient)
 add_subdirectory(atdbwriterclient)
 elseif(BUILD_STAGE MATCHES atdbwritertimerd)
 add_subdirectory(atdbwritertimerd)
