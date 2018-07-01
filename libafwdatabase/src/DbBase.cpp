@@ -13,16 +13,16 @@ namespace sqlite{
 
 
 DbBase::DbBase()
-    : _sqlite3( nullptr )
+    : _sqlite3( 0 )
 {
 
 }
 
 DbBase::~DbBase()
 {
-    if(_sqlite3 != nullptr)
+    if( _sqlite3 )
     {
-        _sqlite3 = nullptr;
+        delete _sqlite3;
     }
 }
 

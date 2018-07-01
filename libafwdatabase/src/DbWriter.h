@@ -18,7 +18,7 @@ namespace sqlite{
 class DbWriter : public DbBase
 {
 public:
-	bool Write(string);
+    bool Write(const std::string & str);
 };
 
 } // sqlite

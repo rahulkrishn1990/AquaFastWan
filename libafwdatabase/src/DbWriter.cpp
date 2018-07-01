@@ -12,7 +12,7 @@ namespace aquafastwan {
 namespace sqlite{
 
 
-bool DbWriter::Write(string in)
+bool DbWriter::Write(const std::__cxx11::string & str)
 {
 	return true;
 }
