@@ -39,6 +39,8 @@ private:
 
    std::list<SensorListener*> m_listeners;
    QMutex m_mutex;
+
+   TimeStamp m_lastEpochTime;
 };
 
 } //sensors

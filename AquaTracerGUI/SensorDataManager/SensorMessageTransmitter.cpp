@@ -47,15 +47,5 @@ void SensorMessageTransmitter::removelistener(SensorListener * pSensorListener)
     m_SensorPublisher->removelistener(pSensorListener);
 }
 
-
-
-//const int timeIntervalInMs = 100;
-//int timeStamp = m_elapsedTimer.elapsed();
-//if( m_lastEpochTime == 0 || (timeStamp - m_lastEpochTime) >= timeIntervalInMs) {
-
-//m_lastEpochTime = timeStamp;
-//}
-
-
 } //sensors
 } //aquatracer

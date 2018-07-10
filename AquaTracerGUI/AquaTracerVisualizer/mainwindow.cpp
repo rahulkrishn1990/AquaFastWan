@@ -11,8 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->m_showValue->setReadOnly(true);
     m_sensorDataMonitor = new aquasensors::visualizer::SensorDataMonitor(this);
 
-    QObject::connect( m_sensorDataMonitor, SIGNAL( setCandidateInfoText( const QString & )), ui->m_showValue,     SLOT( setInfoText( const QString & )));
-    QObject::connect( m_sensorDataMonitor, SIGNAL( appendCandidateInfoText( const QString & )), ui->m_showValue,  SLOT( appendText( const QString & )));
+    QObject::connect( m_sensorDataMonitor, SIGNAL( setCandidateInfoText( const QString & )), this, SLOT( setInfoText( const QString & )));
+    QObject::connect( m_sensorDataMonitor, SIGNAL( appendCandidateInfoText( const QString & )), this, SLOT( appendText( const QString & )));
 }
 
 MainWindow::~MainWindow()

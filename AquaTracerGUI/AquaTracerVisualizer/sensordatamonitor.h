@@ -4,7 +4,7 @@
 #include <QObject>
 
 #include "AquaSensorsApi/aquasensorsdefinitions.hpp"
-#include "SensorDataManager/SensorThread.h"
+#include "../SensorDataManager/SensorThread.h"
 
 namespace aquasensors{
 namespace visualizer{

@@ -10,6 +10,7 @@ SensorPublisher::SensorPublisher( QObject *parent)
     : QThread(parent)
     , m_sensorMsgTransmitter(nullptr)
     , m_shutDown( false )
+    , m_lastEpochTime(0)
 {
 }
 
@@ -49,7 +50,14 @@ void SensorPublisher::run()
                 phSensorMessage = m_sensorMsgTransmitter->getphSensorMsg();
             }
 
-            notifylisteners(phSensorMessage);
+            const int timeIntervalInMs = 100;
+
+            if( m_lastEpochTime == 0 || (phSensorMessage.m_timeStamp - m_lastEpochTime) >= timeIntervalInMs)
+            {
+                notifylisteners(phSensorMessage);
+                m_lastEpochTime = phSensorMessage.m_timeStamp;
+            }
+
         }
     }
 }

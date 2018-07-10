@@ -4,11 +4,11 @@
 
 #include <iostream>
 
+typedef unsigned long TimeStamp;
+
 namespace aquatracer{
 namespace aquasensors{
 namespace definitions{
-
-typedef unsigned long TimeStamp;
 
 struct PhSensorMessage
 {

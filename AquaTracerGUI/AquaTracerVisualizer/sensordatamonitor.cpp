@@ -30,8 +30,9 @@ void SensorDataMonitor::onNewPhMsg(const aquatracer::aquasensors::definitions::P
     QString timeStamp;
     timeStamp.setNum(phMsg.m_timeStamp);
 
-    infoStream << QString( "PhValue:  (%1 ").arg(phVal);
-    infoStream << QString( "at timeStamp, %1 )").arg(timeStamp);
+    infoStream << QString( "PhValue:  %1 ").arg(phVal);
+    infoStream << QString( " at timeStamp: %1").arg(timeStamp);
+    infoStream << QString( "s");
     infoStream << endl;
 
     emit appendCandidateInfoText(info);
